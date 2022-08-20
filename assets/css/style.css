@@ -1,0 +1,156 @@
+body{
+    margin: 0px;
+    font-family: sans-serif;
+}
+header{
+    height: 58vh;
+    background: linear-gradient(45deg,#636FE4, #7F61E3);
+   
+}
+.pageHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.pageHeader h2{
+    margin: 7px;
+    color: #ffffff;
+    /* padding: 20px 30px; */
+    font-family: cursive;
+   
+}
+.pageHeader p{
+    margin: 0;
+}
+.pageHeader div{
+    margin: 20px;
+    padding-right: 30px; 
+}
+.pageHeader input{
+    font-size: 16px;
+    padding: 7px 10px;
+    border-radius: 23px;
+    border: 2px solid gainsboro;
+    background: transparent;
+    color: gainsboro;
+}
+.pageHeader input::placeholder {
+    color: gainsboro;
+}
+input:focus{
+    outline: none;
+}
+.dashboard{
+    width: 75%;
+    margin: auto;
+}
+.dashboard .urlcount{
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px 2px grey;
+    display: flex;
+    justify-content: space-between;
+}
+
+#container-boxes{
+    width: 75%;
+    margin:auto;
+}
+.container-box{
+    margin-top: 60px;
+    box-shadow: 0px 0px 4px 2px grey;
+    border-radius: 5px;
+}
+.latestUrl{
+    padding: 10px 20px; 
+    display: flex;
+    justify-content: space-between;
+}
+.latestUrl button{
+    padding: 5px 15px;
+    font-size: 16px;
+    background: #5E72E4;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.container-box h3{
+    color: #5E5E80;
+    margin: 10px 0px;
+}
+.form{
+    margin-top: -12vh; 
+    position: relative;
+    background-color: #fff;
+    padding: 10px 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 2px grey;
+}
+.form h4{
+    margin: 10px 0px;
+}
+#url-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    background: #F6F7FC;
+    color: gray;
+}
+.urlContainer{
+    height: 60vh;
+    overflow: auto;
+}
+
+.urlContainer::-webkit-scrollbar{
+    width: 8px;
+}
+
+/* Track - whether this scrollbar is scroll*/
+.urlContainer::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px lightgray;
+    border-radius: 8px;
+}
+
+/* Handle - scrollbar inside thumb scrolling*/
+.urlContainer::-webkit-scrollbar-thumb{
+    background-color: #5E5E80;
+    border-radius: 10px;
+}
+.url-boxes{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px;
+    border-bottom: 1px solid lightgray;
+}
+.url-boxes a{
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.Url{
+    color: #525F7F;
+}
+#urlform input{
+    width: 88%;
+    padding: 10px 0px;
+    font-size: 16px;
+    border: 0;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+    margin-right: -5px; 
+}
+
+#urlform button{
+    padding: 7px 9px 10px;
+    font-size: 20px;
+    background: #5E72E4;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    border-radius: 0px 4px 4px 0px;
+    /* margin-left: -5px; */
+}
+main{
+    padding-bottom: 30px;
+}

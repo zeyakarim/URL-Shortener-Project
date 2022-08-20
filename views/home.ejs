@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/x-icon" href="https://silicophilic.com/wp-content/uploads/2020/02/Url_Shortner.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+    <header>
+        <div class="pageHeader">
+            <div style="display: flex;">
+                <p><img src="https://silicophilic.com/wp-content/uploads/2020/02/Url_Shortner.png" alt="logo" width="50"></p>
+                <h2>UrlSwa </h2>
+            </div>
+            
+            <div>
+                <input type="text" placeholder="Search Url..">
+            </div>
+        </div>
+
+        <div class="dashboard">
+            <div>
+                <p style="color:#fff">Dashboard</p>
+            </div>
+
+            <div class="urlcount">
+                <div>
+                    <small style="color:gray">SHORT URLS CREATED</small>
+                    <p style="color:black; margin: 10px 0px 0px" id="count">
+                        <% createUrl.map((url) => { %>
+                            <%= url.urlCreated %>
+                        <% }) %>
+                    </p>
+                </div>
+
+                <div>
+                    <img src="https://nordvpn.com/wp-content/uploads/featured-blog-network-key-945x495-1.svg" alt="image" width="80px">
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div id="container">
+            <div id="container-boxes">
+                <div class="form">
+                    <h4 style="color: #525F7F;">Create new Short URL</h4>
+                    <form action="/urls" method="post" id="urlform">
+                        <input type="url" name="fullUrl" placeholder="https://website.com" id="addUrl">
+                        <button>Shrink Url</button>
+                    </form>
+                </div>
+                
+                <div class="container-box">
+                    <div class="latestUrl">
+                        <h3>Latest URLs</h3>
+                        <button>See all</button>
+                    </div>
+
+                    <div id="url-header">
+                        <h4>LONG URL</h4>
+                        <h4>SHORT URL</h4>
+                    </div>
+                    
+                    
+                    <div class="urlContainer">
+                        <% for(let url of ShorterUrl){ %>
+                            
+                            <div class="url-boxes">
+                                <p>
+                                    <a href="<%= url.fullUrl%>" target="_blank" class="Url"><%= url.fullUrl %></a>
+                                </p>
+                                <p>
+                                    <a href="<%= url.shortUrl%>" target="_blank" class="Url"><%= url.shortUrl %></a>
+                                </p>
+                            </div>
+                        <% } %> 
+                    </div>
+                </div> 
+            </div>
+            
+        </div>    
+    </main>
+  
+    <script src="/js/script.js"></script>
+</body>
+</html>
